@@ -1,0 +1,17 @@
+# Prioritized development roadmap
+
+Estimated complexity is relative within this project. Every phase should leave a runnable application. The first implementation prompt comes after a workspace reinspection. Subsequent prompts are written individually after reviewing actual code.
+
+| Phase and priority | Scope and dependencies | Complexity and risks | Exit gate |
+| --- | --- | --- | --- |
+| 1 · P0 | Django PWA shell, original Tamil sampler, synthetic profiles, local step scoring, two meaningful paths, offline feedback, committed evidence and resume. Start from the empty directory. | M · Worker scope, storage transaction, exercise design | Real offline close/reopen, A/B path divergence from identical initial item, duplicate prevention and independent profile resume. |
+| 2 · P0 | Expand concept graph and original item coverage, add evidence-aware status and adult handoff. Build on phase 1 stores and engine. | M · Content review, ambiguous responses, valid alternative steps | Independent evidence controls status, recurring mistake routes to prerequisite, locally derived adult summary passes three-profile isolation. |
+| 3 · P0 | Implement same-origin progress binding and idempotent reconnect acknowledgment. Depends on phase 1 event contract. | M · Lost responses, conflicting events, invalid credentials and persistent hosting volume | Simulated disconnect/retry and real reconnect give one server row per event. Scoped endpoint and local practice continue through failure. |
+| 4 · P0 | Bounded Tamil tutor and confirmed photo-to-tutor flow. Early in phase 1, confirm organizer/provider access and a small real-device photo/provider feasibility spike when capacity allows. Integrate after the local engine has stable grounding context. | L · Tamil generation, vision errors, secrets, provider terms, latency and device behavior | Physical Android photo through real provider, common typed doubt, confirmation, failure fallback and scoped progress unchanged by AI. |
+| 5 · P0 | Release and demo hardening. Requires phases 1–4. | M · Deployment retention, first-load bytes and real connectivity | Run the full [test plan](TEST_PLAN.md) on HTTPS and an actual device. Audit all [requirements](REQUIREMENTS.md), prepare submission fields and record verified limitations. |
+| 6 · P1 | Alternate intervention selection and next-session mixed review. Build on stable evidence and eligible item coverage. | S–M · Overfitting sparse histories and unstable device time | Two outcomes select distinct reviewed variants. Time shifts leave practice usable, and spaced review preserves evidence. |
+| 7 · P2 | Extra reviewed exercises or Tamil voice spike, subject to verified capacity. | S for content, M for speech · QA and bandwidth | Review coverage and Tamil quality, and measure device support and cost. |
+
+If time compresses, keep the authored pack small and fold the adult summary into phase 1's progress view. Preserve all P0 exit gates. Keep any feature without passing evidence out of the demo claim. The organizer's separate November 23–24 submission window needs confirmation before scheduling continued development. See [event context](RESEARCH.md#official-event-context).
+
+At each handoff, review changed files and tests in the actual workspace, run the relevant online/offline flow, then record blocking defects, significant improvements, polish and future work in [Progress](PROGRESS.md). Resolve a blocking integration issue before asking Codebenders High to build on it.
