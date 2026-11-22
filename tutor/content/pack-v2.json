@@ -1,0 +1,419 @@
+{
+  "packVersion": "2",
+  "policyVersion": "2",
+  "languageReview": "PENDING",
+  "exhaustedText": "இந்தப் பாடத்தின் கேள்விகள் அனைத்தையும் முடித்துவிட்டீர்கள். இது உங்கள் சேமிக்கப்பட்ட முயற்சிகளின் சுருக்கம்; விரும்பினால் கூடுதல் பயிற்சி செய்யலாம்.",
+  "source": {
+    "curriculum": "Tamil-medium Class 8 Mathematics, 2022-revised",
+    "section": "Algebra §3.8.4",
+    "pages": "pp. 103–105",
+    "note": "curriculum reference only; all items are original"
+  },
+  "concepts": [
+    { "id": "C0", "nameTa": "சமநிலையைப் பேணுதல்", "prerequisites": [] },
+    { "id": "C1", "nameTa": "கூட்டல் மற்றும் கழித்தலை மாற்றுதல்", "prerequisites": ["C0"] },
+    { "id": "C2", "nameTa": "பூச்சியமற்ற முழு எண் பெருக்கலை மாற்றுதல்", "prerequisites": ["C0"] },
+    { "id": "C3", "nameTa": "இரு படிச் சமன்பாடுகளைத் தீர்த்தல்", "prerequisites": ["C1", "C2"] },
+    { "id": "C4", "nameTa": "பிரதியிடலால் சரிபார்த்தல்", "prerequisites": ["C3"] }
+  ],
+  "recurrence": {
+    "one_side_subtraction": { "repairItemId": "E10" }
+  },
+  "interventions": [
+    {
+      "id": "I_C0",
+      "conceptId": "C0",
+      "titleTa": "சமநிலையின் அடிப்படை",
+      "bodyTa": "சமன்பாட்டின் இரு பக்கங்களும் ஒரு தராசின் தட்டுகள் போன்றவை. ஒரு பக்கத்தில் செய்யும் செயலை மறு பக்கத்திலும் அதே அளவில் செய்தால் மட்டுமே சமநிலை நிலைக்கும்."
+    },
+    {
+      "id": "I_C1",
+      "conceptId": "C1",
+      "titleTa": "கூட்டலையும் கழித்தலையும் மாற்றுதல்",
+      "bodyTa": "x உடன் கூட்டப்பட்ட எண்ணை நீக்க அதே எண்ணைக் கழிக்கவும்; x இலிருந்து கழிக்கப்பட்ட எண்ணை நீக்க அதே எண்ணைக் கூட்டவும். இரு பக்கங்களிலும் அதே செயலைச் செய்யுங்கள்."
+    },
+    {
+      "id": "I_C2",
+      "conceptId": "C2",
+      "titleTa": "பெருக்கலை மாற்றுதல்",
+      "bodyTa": "x ஐ எண்ணால் பெருக்கியிருந்தால், இரு பக்கங்களையும் அதே எண்ணால் வகுக்கவும். பெருக்கியை ஒரு கூட்டல் எண்ணாகக் கருத வேண்டாம்."
+    },
+    {
+      "id": "I_C3",
+      "conceptId": "C3",
+      "titleTa": "இரு படிகளில் தீர்த்தல்",
+      "bodyTa": "முதலில் மாறிலியை நீக்குங்கள் (கூட்டல் அல்லது கழித்தல்); பின்னர் x உடன் உள்ள பெருக்கியை வகுத்து நீக்குங்கள். வரிசை மாறினால் கணக்கு நீளும்."
+    },
+    {
+      "id": "I_C4",
+      "conceptId": "C4",
+      "titleTa": "பிரதியிட்டுச் சரிபார்த்தல்",
+      "bodyTa": "கண்டறிந்த x இன் மதிப்பை சமன்பாட்டில் வைத்து இடப் பக்கத்தைக் கணக்கிடுங்கள். அது வலப் பக்கத்துடன் சமமாக இருந்தால் தீர்வு சரி."
+    }
+  ],
+  "workedExample": {
+    "equation": "2x + 4 = 10",
+    "stepsTa": [
+      "எடுத்துக்காட்டு: 2x + 4 = 10",
+      "இரு பக்கங்களிலிருந்தும் 4 ஐக் கழிக்கவும்: 2x = 6",
+      "இரு பக்கங்களையும் 2 ஆல் வகுக்கவும்: x = 3",
+      "சரிபார்ப்பு: 2 × 3 + 4 = 10. சரி."
+    ],
+    "solution": "3"
+  },
+  "items": [
+    {
+      "id": "E01",
+      "concept": "C0",
+      "familyId": "F-DIAG",
+      "family": "eq_balance_sub",
+      "evidenceKind": "diagnostic",
+      "hintTa": "மாறிலியை நீக்கும்போது தராசின் இரு தட்டுகளையும் நினையுங்கள்.",
+      "explanationTa": "இரு பக்கங்களிலிருந்தும் 8 ஐக் கழித்தால் 3x = 18; ஒரு பக்கத்தில் மட்டும் கழித்தால் சமநிலை மாறும்.",
+      "prompt": "சமன்பாடு: 3x + 8 = 26. மாறிலி 8 ஐ நீக்கிச் சமநிலையைப் பேணும் செயல் எது?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 8 ஐக் கழித்தால் 3x = 18 கிடைக்கும். ஒரு பக்கத்தில் மட்டும் கழித்தால் சமநிலை மாறும்.",
+      "balanceExplanation": "ஒரு தராசை நினைத்துப் பாருங்கள். இரு தட்டுகளும் சமமாக இருக்கும். இடத் தட்டிலிருந்து மட்டும் 8 ஐ எடுத்தால் இடப் பக்கம் 3x + 8 − 8 = 3x ஆகிறது; ஆனால் வலப் பக்கம் 26 ஆகவே இருக்கிறது. இரு பக்கங்களும் இப்போது சமமாக இல்லை. இரு தட்டுகளிலிருந்தும் ஒரே அளவு 8 ஐ எடுத்தால் மட்டுமே சமநிலை நிலைக்கும்.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB8_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 8 ஐக் கழி" },
+        { "stepId": "SUB8_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 8 ஐக் கழி", "misconception": "one_side_subtraction" },
+        { "stepId": "ADD8_BOTH", "label": "இரு பக்கங்களிலும் 8 ஐக் கூட்டு" },
+        { "stepId": "DIV3_BOTH", "label": "இரு பக்கங்களையும் 3 ஆல் வகு" }
+      ],
+      "answer": "SUB8_BOTH"
+    },
+    {
+      "id": "E02",
+      "concept": "C3",
+      "familyId": "F-DIAG-NUM",
+      "family": "two_step_solve",
+      "evidenceKind": "practice",
+      "hintTa": "முதலில் மாறிலி 8 ஐ நீக்குங்கள்.",
+      "explanationTa": "8 ஐக் கழித்தால் 3x = 18; 3 ஆல் வகுத்தால் x = 6.",
+      "prompt": "3x + 8 = 26 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "3x = 18; இரு பக்கங்களையும் 3 ஆல் வகுத்தால் x = 6.",
+      "evidenceType": "numeric",
+      "answer": "6"
+    },
+    {
+      "id": "E03",
+      "concept": "C3",
+      "familyId": "F-TWO",
+      "family": "two_step_neg_const",
+      "evidenceKind": "practice",
+      "hintTa": "இரு பக்கங்களிலும் 5 ஐக் கூட்டுங்கள்.",
+      "explanationTa": "2x = 14; 2 ஆல் வகுத்தால் x = 7.",
+      "prompt": "2x - 5 = 9 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "இரு பக்கங்களிலும் 5 ஐக் கூட்டினால் 2x = 14; 2 ஆல் வகுத்தால் x = 7.",
+      "evidenceType": "numeric",
+      "answer": "7"
+    },
+    {
+      "id": "E04",
+      "concept": "C3",
+      "familyId": "F-TWO",
+      "family": "two_step_solve",
+      "evidenceKind": "practice",
+      "hintTa": "மாறிலி 6 ஐ இரு பக்கங்களிலிருந்தும் நீக்குங்கள்.",
+      "explanationTa": "2x = −6; 2 ஆல் வகுத்தால் x = −3.",
+      "prompt": "2x + 6 = 0 எனில், x இன் மதிப்பு என்ன? (எதிர்க்குறியுடன் உள்ளிடவும்)",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 6 ஐக் கழித்தால் 2x = -6; 2 ஆல் வகுத்தால் x = -3.",
+      "evidenceType": "numeric",
+      "answer": "-3"
+    },
+    {
+      "id": "E05",
+      "concept": "C0",
+      "familyId": "EQP",
+      "family": "eq_balance_sub",
+      "evidenceKind": "practice",
+      "role": "probe",
+      "interventionId": "I_C0",
+      "hintTa": "மாறிலி 2 ஐ இரு பக்கங்களிலிருந்தும் கழியுங்கள்.",
+      "explanationTa": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழித்தால் 3x = 9; எனவே x = 3.",
+      "prompt": "சமன்பாடு: 3x + 2 = 11. மாறிலி 2 ஐ நீக்கும் சரியான செயல் எது?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழித்தால் 3x = 9; எனவே x = 3.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB2_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழி" },
+        { "stepId": "SUB2_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 2 ஐக் கழி", "misconception": "one_side_subtraction" },
+        { "stepId": "ADD2_BOTH", "label": "இரு பக்கங்களிலும் 2 ஐக் கூட்டு" },
+        { "stepId": "DIV3_BOTH", "label": "இரு பக்கங்களையும் 3 ஆல் வகு" }
+      ],
+      "answer": "SUB2_BOTH"
+    },
+    {
+      "id": "E06",
+      "concept": "C0",
+      "familyId": "EQP",
+      "family": "eq_balance_sub",
+      "evidenceKind": "practice",
+      "hintTa": "மாறிலி 2 ஐ நீக்கும் செயலைத் தேர்ந்தெடுங்கள்.",
+      "explanationTa": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழித்தால் 5x = 15; எனவே x = 3.",
+      "prompt": "சமன்பாடு: 5x + 2 = 17. மாறிலி 2 ஐ நீக்கும் சரியான செயல் எது?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழித்தால் 5x = 15; எனவே x = 3.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB2_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழி" },
+        { "stepId": "SUB2_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 2 ஐக் கழி" },
+        { "stepId": "ADD2_BOTH", "label": "இரு பக்கங்களிலும் 2 ஐக் கூட்டு" },
+        { "stepId": "DIV3_BOTH", "label": "இரு பக்கங்களையும் 3 ஆல் வகு" }
+      ],
+      "answer": "SUB2_BOTH"
+    },
+    {
+      "id": "E07",
+      "concept": "C2",
+      "familyId": "F-INV",
+      "family": "undo_mul",
+      "evidenceKind": "practice",
+      "hintTa": "பெருக்கலை எதிர்மறையாக்கும் செயலை நினையுங்கள்.",
+      "explanationTa": "×4 ஐ நீக்க இரு பக்கங்களையும் 4 ஆல் வகுக்க வேண்டும்; எனவே நேர்மாறு ÷4.",
+      "prompt": "×4 என்ற செயலின் நேர்மாறு எது?",
+      "feedback": "பெருக்கலை நீக்க இரு பக்கங்களையும் 4 ஆல் வகுக்க வேண்டும்; எனவே நேர்மாறு ÷4.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "INV_DIV4", "label": "÷4" },
+        { "stepId": "INV_SUB4", "label": "−4" },
+        { "stepId": "INV_ADD4", "label": "+4" },
+        { "stepId": "INV_MUL4", "label": "×4" }
+      ],
+      "answer": "INV_DIV4"
+    },
+    {
+      "id": "E08",
+      "concept": "C1",
+      "familyId": "F-SIGNED",
+      "family": "undo_add_sub",
+      "evidenceKind": "practice",
+      "hintTa": "9 ஐ இரு பக்கங்களிலிருந்தும் நீக்குங்கள்.",
+      "explanationTa": "x = 4 − 9 = −5.",
+      "prompt": "x + 9 = 4 எனில், x இன் மதிப்பு என்ன? (எதிர்க்குறியுடன் உள்ளிடவும்)",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 9 ஐக் கழித்தால் x = -5.",
+      "evidenceType": "numeric",
+      "answer": "-5"
+    },
+    {
+      "id": "E09",
+      "concept": "C4",
+      "familyId": "F-CHECK",
+      "family": "substitute_check",
+      "evidenceKind": "check",
+      "hintTa": "x க்குப் பதிலாக 6 ஐ வையுங்கள்.",
+      "explanationTa": "3 × 6 + 8 = 18 + 8 = 26; எனவே x = 6 சரியான தீர்வு.",
+      "prompt": "x = 6 என்பது 3x + 8 = 26 க்குச் சரியா? 3 × 6 + 8 இன் மதிப்பு என்ன?",
+      "feedback": "3 × 6 = 18; 18 + 8 = 26. எனவே x = 6 சரியான தீர்வு.",
+      "evidenceType": "numeric",
+      "answer": "26"
+    },
+    {
+      "id": "E10",
+      "concept": "C0",
+      "familyId": "F-REPAIR",
+      "family": "eq_balance_sub",
+      "evidenceKind": "practice",
+      "role": "repair",
+      "hintTa": "இரு பக்கங்களிலிருந்தும் 4 ஐக் கழியுங்கள்.",
+      "explanationTa": "இரு பக்கங்களிலிருந்தும் 4 ஐக் கழித்தால் x = 6; சரிபார்ப்பு: 6 + 4 = 10.",
+      "prompt": "சமன்பாடு: x + 4 = 10. சமநிலையைப் பேணும் சரியான செயல் எது?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 4 ஐக் கழித்தால் x = 6. சரிபார்ப்பு: 6 + 4 = 10.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB4_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 4 ஐக் கழி" },
+        { "stepId": "SUB4_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 4 ஐக் கழி" },
+        { "stepId": "ADD4_BOTH", "label": "இரு பக்கங்களிலும் 4 ஐக் கூட்டு" },
+        { "stepId": "DIV4_BOTH", "label": "இரு பக்கங்களையும் 4 ஆல் வகு" }
+      ],
+      "answer": "SUB4_BOTH"
+    },
+    {
+      "id": "E11",
+      "concept": "C0",
+      "familyId": "F-MIRROR",
+      "family": "eq_balance_mirror",
+      "evidenceKind": "explanation",
+      "hintTa": "இடப் பக்கத்தில் செய்த அதே செயலை மறு பக்கத்திலும் செய்யுங்கள்.",
+      "explanationTa": "இடப் பக்கத்திலிருந்து 2 ஐக் கழித்தால் வலப் பக்கத்திலிருந்தும் 2 ஐக் கழிக்க வேண்டும்: x = 7.",
+      "prompt": "சமன்பாடு: x + 2 = 9. இடப் பக்கத்திலிருந்து 2 ஐக் கழித்தால், வலப் பக்கத்தில் என்ன செய்ய வேண்டும்?",
+      "feedback": "வலப் பக்கத்திலிருந்தும் 2 ஐக் கழித்தால் சமநிலை நிலைக்கும்; x = 7.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB2_RIGHT", "label": "வலப் பக்கத்திலிருந்தும் 2 ஐக் கழி" },
+        { "stepId": "KEEP_RIGHT", "label": "வலப் பக்கத்தை அப்படியே விடு", "misconception": "one_side_subtraction" },
+        { "stepId": "ADD2_RIGHT", "label": "வலப் பக்கத்திலும் 2 ஐக் கூட்டு" },
+        { "stepId": "DIV2_RIGHT", "label": "வலப் பக்கத்தை 2 ஆல் வகு" }
+      ],
+      "answer": "SUB2_RIGHT"
+    },
+    {
+      "id": "E12",
+      "concept": "C1",
+      "familyId": "F-UNDO-ADD",
+      "family": "undo_add_sub",
+      "evidenceKind": "practice",
+      "hintTa": "5 ஐ இரு பக்கங்களிலிருந்தும் கழியுங்கள்.",
+      "explanationTa": "12 − 5 = 7, எனவே x = 7.",
+      "prompt": "x + 5 = 12 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 5 ஐக் கழித்தால் x = 7.",
+      "evidenceType": "numeric",
+      "answer": "7"
+    },
+    {
+      "id": "E13",
+      "concept": "C1",
+      "familyId": "F-UNDO-SUB",
+      "family": "undo_sub",
+      "evidenceKind": "explanation",
+      "interventionId": "I_C1",
+      "hintTa": "கழித்தலை நீக்கும் நேர்மாறு செயல் எது?",
+      "explanationTa": "கழித்தலின் நேர்மாறு கூட்டல்: 3 + 7 = 10, எனவே x = 10.",
+      "prompt": "சமன்பாடு: x − 7 = 3. x ஐத் தனியாக்க இரு பக்கங்களிலும் என்ன செய்ய வேண்டும்?",
+      "feedback": "இரு பக்கங்களிலும் 7 ஐக் கூட்டினால் x = 10. கழித்தால் தவறு.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "ADD7_BOTH", "label": "இரு பக்கங்களிலும் 7 ஐக் கூட்டு" },
+        { "stepId": "SUB7_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 7 ஐக் கழி", "misconception": "inverse_sign" },
+        { "stepId": "MUL7_BOTH", "label": "இரு பக்கங்களையும் 7 ஆல் பெருக்கு" },
+        { "stepId": "DIV3_BOTH", "label": "இரு பக்கங்களையும் 3 ஆல் வகு" }
+      ],
+      "answer": "ADD7_BOTH"
+    },
+    {
+      "id": "E14",
+      "concept": "C2",
+      "familyId": "F-MUL",
+      "family": "undo_mul",
+      "evidenceKind": "practice",
+      "hintTa": "பெருக்கலின் நேர்மாறு வகுத்தல்.",
+      "explanationTa": "35 ÷ 5 = 7, எனவே x = 7.",
+      "prompt": "5x = 35 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "இரு பக்கங்களையும் 5 ஆல் வகுத்தால் x = 7.",
+      "evidenceType": "numeric",
+      "answer": "7"
+    },
+    {
+      "id": "E15",
+      "concept": "C2",
+      "familyId": "F-MUL-WHY",
+      "family": "undo_mul_why",
+      "evidenceKind": "explanation",
+      "interventionId": "I_C2",
+      "hintTa": "2 ஒரு கூட்டல் எண் அல்ல; அது x உடன் பெருக்கப்படுகிறது.",
+      "explanationTa": "2x = 8 என்றால் x = 8 ÷ 2 = 4.",
+      "prompt": "சமன்பாடு: 2x = 8. 2 ஒரு பெருக்கி; x ஐப் பெற இரு பக்கங்களிலும் என்ன செய்ய வேண்டும்?",
+      "feedback": "இரு பக்கங்களையும் 2 ஆல் வகுத்தால் x = 4. 8 இலிருந்து 2 ஐக் கழிப்பது தவறு.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "DIV2_BOTH", "label": "இரு பக்கங்களையும் 2 ஆல் வகு" },
+        { "stepId": "SUB2_FROM8", "label": "8 இலிருந்து 2 ஐக் கழி (x = 8 − 2)", "misconception": "coefficient_as_addend" },
+        { "stepId": "ADD2_BOTH", "label": "இரு பக்கங்களிலும் 2 ஐக் கூட்டு" },
+        { "stepId": "MUL2_BOTH", "label": "இரு பக்கங்களையும் 2 ஆல் பெருக்கு" }
+      ],
+      "answer": "DIV2_BOTH"
+    },
+    {
+      "id": "E16",
+      "concept": "C3",
+      "familyId": "F-TWO-ORDER",
+      "family": "two_step_order",
+      "evidenceKind": "explanation",
+      "interventionId": "I_C3",
+      "hintTa": "முதலில் கழித்தலை நீக்குங்கள்.",
+      "explanationTa": "−5 இன் நேர்மாறு +5; இரு பக்கங்களிலும் 5 ஐக் கூட்டினால் 2x = 14.",
+      "prompt": "சமன்பாடு: 2x − 5 = 9. x ஐத் தனியாக்க முதலில் எந்தப் படி சரி?",
+      "feedback": "முதலில் இரு பக்கங்களிலும் 5 ஐக் கூட்டவும்: 2x = 14; பின்னர் 2 ஆல் வகுக்கவும்: x = 7.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "ADD5_BOTH", "label": "இரு பக்கங்களிலும் 5 ஐக் கூட்டு" },
+        { "stepId": "SUB5_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 5 ஐக் கழி", "misconception": "inverse_sign" },
+        { "stepId": "DIV9_BOTH", "label": "இரு பக்கங்களையும் 9 ஆல் வகு" },
+        { "stepId": "ADD5_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 5 ஐக் கூட்டு" }
+      ],
+      "answer": "ADD5_BOTH"
+    },
+    {
+      "id": "E17",
+      "concept": "C3",
+      "familyId": "F-TWO-NEG",
+      "family": "two_step_neg_const",
+      "evidenceKind": "practice",
+      "hintTa": "முதலில் −3 ஐ நீக்குங்கள்.",
+      "explanationTa": "4x = 12; எனவே x = 3.",
+      "prompt": "4x − 3 = 9 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "இரு பக்கங்களிலும் 3 ஐக் கூட்டினால் 4x = 12; 4 ஆல் வகுத்தால் x = 3.",
+      "evidenceType": "numeric",
+      "answer": "3"
+    },
+    {
+      "id": "E18",
+      "concept": "C4",
+      "familyId": "F-CHECK-SUB",
+      "family": "substitute_check",
+      "evidenceKind": "check",
+      "hintTa": "x இன் இடத்தில் 5 ஐ வைத்துக் கணக்கிடுங்கள்.",
+      "explanationTa": "3 × 5 − 4 = 11, இது சமன்பாட்டின் வலப் பக்கத்திற்குச் சமம்.",
+      "prompt": "x = 5 என்பது 3x − 4 = 11 க்குச் சரியா? 3 × 5 − 4 இன் மதிப்பு என்ன?",
+      "feedback": "3 × 5 − 4 = 15 − 4 = 11. எனவே x = 5 சரியான தீர்வு.",
+      "evidenceType": "numeric",
+      "answer": "11"
+    },
+    {
+      "id": "E19",
+      "concept": "C4",
+      "familyId": "F-CHECK-PICK",
+      "family": "substitute_pick",
+      "evidenceKind": "check",
+      "interventionId": "I_C4",
+      "hintTa": "இடப் பக்கத்தின் மதிப்பை வலப் பக்கத்துடன் ஒப்பிடுங்கள்.",
+      "explanationTa": "2 × 4 + 1 = 9, இது வலப் பக்கத்திற்குச் சமம்; எனவே x = 4 சரி.",
+      "prompt": "x = 4 ஐ 2x + 1 = 9 இல் பிரதியிட்டால் எது சரி?",
+      "feedback": "2 × 4 + 1 = 9; இடப் பக்கமும் வலப் பக்கமும் சமம். எனவே x = 4 சரி.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "OK_9", "label": "2 × 4 + 1 = 9; இரு பக்கங்களும் சமம்" },
+        { "stepId": "NO_7", "label": "2 × 4 + 1 = 7; எனவே x = 4 சரியில்லை" },
+        { "stepId": "SKIP_CHECK", "label": "சரிபார்க்கத் தேவையில்லை" }
+      ],
+      "answer": "OK_9"
+    },
+    {
+      "id": "E20",
+      "concept": "C3",
+      "familyId": "F-TWO-A",
+      "family": "two_step_solve",
+      "evidenceKind": "practice",
+      "hintTa": "முதலில் 10 ஐ நீக்குங்கள்.",
+      "explanationTa": "5x = 25; எனவே x = 5.",
+      "prompt": "5x + 10 = 35 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 10 ஐக் கழித்தால் 5x = 25; 5 ஆல் வகுத்தால் x = 5.",
+      "evidenceType": "numeric",
+      "answer": "5"
+    },
+    {
+      "id": "E21",
+      "concept": "C1",
+      "familyId": "F-UNDO-SUB-B",
+      "family": "undo_sub",
+      "evidenceKind": "practice",
+      "hintTa": "கழித்தலின் நேர்மாறைப் பயன்படுத்துங்கள்.",
+      "explanationTa": "2 + 6 = 8, எனவே x = 8.",
+      "prompt": "x − 6 = 2 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "இரு பக்கங்களிலும் 6 ஐக் கூட்டினால் x = 8.",
+      "evidenceType": "numeric",
+      "answer": "8"
+    },
+    {
+      "id": "E22",
+      "concept": "C2",
+      "familyId": "F-MUL-B",
+      "family": "undo_mul",
+      "evidenceKind": "transfer",
+      "hintTa": "இரு பக்கங்களையும் பெருக்கியால் வகுங்கள்.",
+      "explanationTa": "28 ÷ 7 = 4, எனவே x = 4.",
+      "prompt": "7x = 28 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "இரு பக்கங்களையும் 7 ஆல் வகுத்தால் x = 4.",
+      "evidenceType": "numeric",
+      "answer": "4"
+    }
+  ]
+}

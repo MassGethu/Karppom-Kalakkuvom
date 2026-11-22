@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>கற்றல் பயணம்</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/static/app.v1.css">
+</head>
+<body>
+  <header class="top">
+    <h1>கற்றல் பயணம்</h1>
+    <p id="readiness" class="status" role="status" data-testid="readiness" data-state="checking">ஆஃப்லைன் தயார்நிலை சரிபார்க்கப்படுகிறது…</p>
+    <button type="button" id="shell-retry" class="btn quiet" data-testid="shell-retry" hidden>மீண்டும் முயற்சி செய்க</button>
+    <p id="connection" class="status" role="status" data-testid="connection" data-state="online"></p>
+    <p id="sync-status" class="status sync-status" role="status" data-testid="sync-status" data-state="idle"></p>
+    <span id="sync-pending-count" class="status" data-testid="sync-pending-count"></span>
+    <button type="button" id="sync-retry" class="btn quiet sync-retry" data-testid="sync-retry" hidden>மீண்டும் முயற்சி செய்க</button>
+    <p id="status" class="status save" role="status" aria-live="polite" data-testid="status" data-state="idle"></p>
+  </header>
+  <main id="app" data-testid="app">
+    <noscript>இந்தப் பயன்பாட்டிற்கு ஜாவாஸ்கிரிப்ட் தேவை. அதை இயக்கவும்.</noscript>
+  </main>
+  <template id="doubt-template">
+    <div class="doubt">
+      <button type="button" class="btn quiet" data-testid="ask-doubt">சந்தேகம் கேளுங்கள்</button>
+      <section class="doubt-panel" data-testid="doubt-panel" hidden>
+        <button type="button" class="btn quiet" data-testid="doubt-close">திரும்பு</button>
+        <label class="doubt-label">
+          உங்கள் சந்தேகத்தை எழுதுங்கள்
+          <textarea class="doubt-text" data-testid="doubt-text" maxlength="500" rows="3"></textarea>
+        </label>
+        <label class="doubt-label">
+          சமன்பாட்டுப் படம்
+          <input type="file" accept="image/*" capture="environment" data-testid="doubt-photo">
+        </label>
+        <img class="doubt-preview" data-testid="doubt-preview" alt="சமன்பாட்டுப் படம்" hidden>
+        <button type="button" class="btn" data-testid="doubt-transcribe" disabled>படத்தை படிக்க</button>
+        <label class="doubt-label">
+          சமன்பாட்டை சரிபாருங்கள்
+          <input type="text" autocomplete="off" spellcheck="false" inputmode="text" data-testid="doubt-equation-edit">
+        </label>
+        <p class="note doubt-note" data-testid="doubt-note" hidden></p>
+        <button type="button" class="btn primary" data-testid="doubt-send" disabled>குறிப்பு கேளுங்கள்</button>
+        <p class="doubt-hint" data-testid="doubt-hint" hidden></p>
+        <p class="doubt-check" data-testid="doubt-check" hidden></p>
+        <p class="doubt-source" data-testid="doubt-source" hidden></p>
+        <p class="notice" data-testid="doubt-error" role="alert" hidden></p>
+      </section>
+    </div>
+  </template>
+  <script type="module" src="/static/app.v1.js"></script>
+</body>
+</html>

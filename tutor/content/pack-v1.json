@@ -1,0 +1,152 @@
+{
+  "packVersion": "1",
+  "policyVersion": "1",
+  "languageReview": "PENDING",
+  "exhaustedText": "இந்தப் பாடத்தின் கேள்விகள் அனைத்தையும் முடித்துவிட்டீர்கள். இது உங்கள் சேமிக்கப்பட்ட முயற்சிகளின் சுருக்கம்; விரும்பினால் கூடுதல் பயிற்சி செய்யலாம்.",
+  "source": {
+    "curriculum": "Tamil-medium Class 8 Mathematics, 2022-revised",
+    "section": "Algebra §3.8.4",
+    "pages": "pp. 103–105",
+    "note": "curriculum reference only; all items are original"
+  },
+  "concepts": [
+    { "id": "C0", "nameTa": "சமநிலையைப் பேணுதல்" },
+    { "id": "C1", "nameTa": "கூட்டல் மற்றும் கழித்தலை மாற்றுதல்" },
+    { "id": "C2", "nameTa": "பூச்சியமற்ற முழு எண் பெருக்கலை மாற்றுதல்" },
+    { "id": "C3", "nameTa": "இரு படிச் சமன்பாடுகளைத் தீர்த்தல்" },
+    { "id": "C4", "nameTa": "பிரதியிடலால் சரிபார்த்தல்" }
+  ],
+  "workedExample": {
+    "equation": "2x + 4 = 10",
+    "stepsTa": [
+      "எடுத்துக்காட்டு: 2x + 4 = 10",
+      "இரு பக்கங்களிலிருந்தும் 4 ஐக் கழிக்கவும்: 2x = 6",
+      "இரு பக்கங்களையும் 2 ஆல் வகுக்கவும்: x = 3",
+      "சரிபார்ப்பு: 2 × 3 + 4 = 10. சரி."
+    ],
+    "solution": "3"
+  },
+  "items": [
+    {
+      "id": "E01",
+      "concept": "C0",
+      "familyId": "F-DIAG",
+      "prompt": "சமன்பாடு: 3x + 8 = 26. மாறிலி 8 ஐ நீக்கிச் சமநிலையைப் பேணும் செயல் எது?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 8 ஐக் கழித்தால் 3x = 18 கிடைக்கும். ஒரு பக்கத்தில் மட்டும் கழித்தால் சமநிலை மாறும்.",
+      "balanceExplanation": "ஒரு தராசை நினைத்துப் பாருங்கள். இரு தட்டுகளும் சமமாக இருக்கும். இடத் தட்டிலிருந்து மட்டும் 8 ஐ எடுத்தால் இடப் பக்கம் 3x + 8 − 8 = 3x ஆகிறது; ஆனால் வலப் பக்கம் 26 ஆகவே இருக்கிறது. இரு பக்கங்களும் இப்போது சமமாக இல்லை. இரு தட்டுகளிலிருந்தும் ஒரே அளவு 8 ஐ எடுத்தால் மட்டுமே சமநிலை நிலைக்கும்.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB8_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 8 ஐக் கழி" },
+        { "stepId": "SUB8_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 8 ஐக் கழி", "misconception": "one_side_subtraction" },
+        { "stepId": "ADD8_BOTH", "label": "இரு பக்கங்களிலும் 8 ஐக் கூட்டு" },
+        { "stepId": "DIV3_BOTH", "label": "இரு பக்கங்களையும் 3 ஆல் வகு" }
+      ],
+      "answer": "SUB8_BOTH"
+    },
+    {
+      "id": "E02",
+      "concept": "C3",
+      "familyId": "F-DIAG-NUM",
+      "prompt": "3x + 8 = 26 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "3x = 18; இரு பக்கங்களையும் 3 ஆல் வகுத்தால் x = 6.",
+      "evidenceType": "numeric",
+      "answer": "6"
+    },
+    {
+      "id": "E03",
+      "concept": "C3",
+      "familyId": "F-TWO",
+      "prompt": "2x - 5 = 9 எனில், x இன் மதிப்பு என்ன?",
+      "feedback": "இரு பக்கங்களிலும் 5 ஐக் கூட்டினால் 2x = 14; 2 ஆல் வகுத்தால் x = 7.",
+      "evidenceType": "numeric",
+      "answer": "7"
+    },
+    {
+      "id": "E04",
+      "concept": "C3",
+      "familyId": "F-TWO",
+      "prompt": "2x + 6 = 0 எனில், x இன் மதிப்பு என்ன? (எதிர்க்குறியுடன் உள்ளிடவும்)",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 6 ஐக் கழித்தால் 2x = -6; 2 ஆல் வகுத்தால் x = -3.",
+      "evidenceType": "numeric",
+      "answer": "-3"
+    },
+    {
+      "id": "E05",
+      "concept": "C0",
+      "familyId": "EQP",
+      "prompt": "சமன்பாடு: 3x + 2 = 11. மாறிலி 2 ஐ நீக்கும் சரியான செயல் எது?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழித்தால் 3x = 9; எனவே x = 3.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB2_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழி" },
+        { "stepId": "SUB2_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 2 ஐக் கழி", "misconception": "one_side_subtraction" },
+        { "stepId": "ADD2_BOTH", "label": "இரு பக்கங்களிலும் 2 ஐக் கூட்டு" },
+        { "stepId": "DIV3_BOTH", "label": "இரு பக்கங்களையும் 3 ஆல் வகு" }
+      ],
+      "answer": "SUB2_BOTH"
+    },
+    {
+      "id": "E06",
+      "concept": "C0",
+      "familyId": "EQP",
+      "prompt": "சமன்பாடு: 5x + 2 = 17. மாறிலி 2 ஐ நீக்கும் சரியான செயல் எது?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழித்தால் 5x = 15; எனவே x = 3.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB2_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 2 ஐக் கழி" },
+        { "stepId": "SUB2_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 2 ஐக் கழி" },
+        { "stepId": "ADD2_BOTH", "label": "இரு பக்கங்களிலும் 2 ஐக் கூட்டு" },
+        { "stepId": "DIV3_BOTH", "label": "இரு பக்கங்களையும் 3 ஆல் வகு" }
+      ],
+      "answer": "SUB2_BOTH"
+    },
+    {
+      "id": "E07",
+      "concept": "C2",
+      "familyId": "F-INV",
+      "prompt": "×4 என்ற செயலின் நேர்மாறு எது?",
+      "feedback": "பெருக்கலை நீக்க இரு பக்கங்களையும் 4 ஆல் வகுக்க வேண்டும்; எனவே நேர்மாறு ÷4.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "INV_DIV4", "label": "÷4" },
+        { "stepId": "INV_SUB4", "label": "−4" },
+        { "stepId": "INV_ADD4", "label": "+4" },
+        { "stepId": "INV_MUL4", "label": "×4" }
+      ],
+      "answer": "INV_DIV4"
+    },
+    {
+      "id": "E08",
+      "concept": "C1",
+      "familyId": "F-SIGNED",
+      "prompt": "x + 9 = 4 எனில், x இன் மதிப்பு என்ன? (எதிர்க்குறியுடன் உள்ளிடவும்)",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 9 ஐக் கழித்தால் x = -5.",
+      "evidenceType": "numeric",
+      "answer": "-5"
+    },
+    {
+      "id": "E09",
+      "concept": "C4",
+      "familyId": "F-CHECK",
+      "prompt": "x = 6 என்பது 3x + 8 = 26 க்குச் சரியா? 3 × 6 + 8 இன் மதிப்பு என்ன?",
+      "feedback": "3 × 6 = 18; 18 + 8 = 26. எனவே x = 6 சரியான தீர்வு.",
+      "evidenceType": "numeric",
+      "answer": "26"
+    },
+    {
+      "id": "E10",
+      "concept": "C0",
+      "familyId": "F-REPAIR",
+      "prompt": "சமன்பாடு: x + 4 = 10. சமநிலையைப் பேணும் சரியான செயல் எது?",
+      "feedback": "இரு பக்கங்களிலிருந்தும் 4 ஐக் கழித்தால் x = 6. சரிபார்ப்பு: 6 + 4 = 10.",
+      "evidenceType": "choice",
+      "options": [
+        { "stepId": "SUB4_BOTH", "label": "இரு பக்கங்களிலிருந்தும் 4 ஐக் கழி" },
+        { "stepId": "SUB4_LEFT", "label": "இடப் பக்கத்திலிருந்து மட்டும் 4 ஐக் கழி" },
+        { "stepId": "ADD4_BOTH", "label": "இரு பக்கங்களிலும் 4 ஐக் கூட்டு" },
+        { "stepId": "DIV4_BOTH", "label": "இரு பக்கங்களையும் 4 ஆல் வகு" }
+      ],
+      "answer": "SUB4_BOTH"
+    }
+  ]
+}

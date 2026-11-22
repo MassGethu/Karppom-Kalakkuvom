@@ -1,0 +1,307 @@
+body {
+  font-size: 18px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.7;
+}
+
+/* Tamil script needs taller line boxes than Latin text. */
+:lang(ta), body {
+  line-height: 1.7;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+/* Status regions: readiness, connection and save state. */
+.status {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.status[data-state="ready"],
+.status[data-state="online"],
+.status[data-state="saved"] {
+  color: #166534;
+}
+
+.status[data-state="offline"],
+.status[data-state="failed"],
+.status[data-state="notReady"],
+.status[data-state="notControlled"] {
+  color: #92400e;
+}
+
+.status[data-state="saving"] {
+  color: #1e3a8a;
+}
+
+/* Sync status and its retry control. Colours follow the status rules above. */
+.sync-status {
+  line-height: 1.6;
+}
+
+.sync-status[data-state="pending"] {
+  color: #1e3a8a;
+}
+
+.sync-status[data-state="synced"] {
+  color: #166534;
+}
+
+.sync-status[data-state="retry"] {
+  color: #92400e;
+}
+
+.sync-retry {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.7rem 0.9rem;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.note,
+.meta,
+.summary,
+.concept {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.concept {
+  font-weight: 600;
+}
+
+.notice {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  border-left: 4px solid #92400e;
+  background: #fef3c7;
+  line-height: 1.7;
+}
+
+/* Equation / prompt styling: numerals stay on one line and get space for a balance reading. */
+.prompt {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
+
+.equation {
+  font-variant-numeric: tabular-nums;
+  white-space: normal;
+}
+
+.equation .eq,
+.equation-line {
+  display: inline-block;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.35rem;
+  background: #f1f5f9;
+}
+
+/* Touch targets: at least 44 CSS px high and wide. */
+.btn {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  line-height: 1.5;
+  text-align: left;
+  color: #0f172a;
+  background: #ffffff;
+  border: 2px solid #94a3b8;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.btn.primary {
+  color: #ffffff;
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn.option {
+  font-size: 1.05rem;
+}
+
+.btn.profile {
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+.btn.quiet {
+  border-style: dashed;
+  text-align: center;
+}
+
+.btn[hidden],
+[hidden] {
+  display: none;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  font-size: 1.2rem;
+  border: 2px solid #94a3b8;
+  border-radius: 0.6rem;
+}
+
+.feedback {
+  min-height: 1.5rem;
+  line-height: 1.8;
+  padding: 0.5rem 0;
+}
+
+.feedback[data-tone="correct"] {
+  color: #166534;
+}
+
+.feedback[data-tone="wrong"] {
+  color: #92400e;
+}
+
+.feedback[data-tone="error"] {
+  color: #991b1b;
+}
+
+/* Adult summary: single column, long Tamil words wrap instead of scrolling sideways. */
+.adult-summary {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.adult-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.adult-action {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem;
+  border-left: 4px solid #1d4ed8;
+  background: #eff6ff;
+}
+
+noscript {
+  display: block;
+  padding: 0.75rem;
+  background: #fef3c7;
+}
+
+/* Doubt panel: opened from the item screen; the item above it is left as it was. */
+.doubt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.doubt [hidden] {
+  display: none;
+}
+
+.doubt-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  border: 2px dashed #94a3b8;
+  border-radius: 0.6rem;
+}
+
+.doubt-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.doubt-text {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 4.5rem;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  line-height: 1.6;
+  border: 2px solid #94a3b8;
+  border-radius: 0.6rem;
+}
+
+.doubt-panel input[type="file"] {
+  min-height: 44px;
+  max-width: 100%;
+}
+
+.doubt-preview {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+}
+
+.doubt-hint,
+.doubt-check {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.doubt-source[data-source="provider"] {
+  color: #1e3a8a;
+}
+
+.doubt-source[data-source="fallback"] {
+  color: #92400e;
+}
